@@ -20,10 +20,9 @@ export const site = {
  */
 export const nav = [
   { label: "The problem", href: "/#problem", key: "nav.problem" },
-  { label: "Compare", href: "/#comparison", key: "nav.compare" },
   { label: "Voice log", href: "/voice-log", key: "nav.voiceLog" },
-  { label: "Decoder", href: "/decoder", key: "nav.decoder" },
-  { label: "Evidence", href: "/evidence", key: "nav.evidence" },
+  { label: "Jargon decoder", href: "/decoder", key: "nav.decoder" },
+  { label: "Evidence pack", href: "/evidence", key: "nav.evidence" },
   { label: "Glossary", href: "/glossary", key: "nav.glossary" },
   { label: "Pricing", href: "/pricing", key: "nav.pricing" },
   { label: "FAQ", href: "/faq", key: "nav.faq" },

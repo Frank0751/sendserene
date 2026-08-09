@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site/site-header";
+import { TranslationNotice } from "@/components/site/translation-notice";
 import { SiteFooter } from "@/components/site/site-footer";
 import { AccessibilityPanel } from "@/components/site/accessibility-panel";
 import { ScrollUtilities } from "@/components/site/scroll-utilities";
@@ -24,8 +25,12 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">
       <SiteHeader />
+      <TranslationNotice />
       <main className="flex-1">
         <PageHeader
+          eyebrowKey="page.pricing.eyebrow"
+          titleKey="page.pricing.title"
+          bodyKey="page.pricing.body"
         bgImage="/img/hero-pricing.png"
           eyebrow={pricing.eyebrow}
           title={pricing.title}

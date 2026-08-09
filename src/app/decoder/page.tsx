@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site/site-header";
+import { TranslationNotice } from "@/components/site/translation-notice";
 import { SiteFooter } from "@/components/site/site-footer";
 import { AccessibilityPanel } from "@/components/site/accessibility-panel";
 import { ScrollUtilities } from "@/components/site/scroll-utilities";
@@ -23,8 +24,12 @@ export default function DecoderPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">
       <SiteHeader />
+      <TranslationNotice />
       <main className="flex-1">
         <PageHeader
+          eyebrowKey="page.decoder.eyebrow"
+          titleKey="page.decoder.title"
+          bodyKey="page.decoder.body"
         bgImage="/img/hero-decoder.png"
           eyebrow={decoderFeature.eyebrow}
           title={decoderFeature.title}

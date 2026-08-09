@@ -9,6 +9,11 @@ import {
   type LocaleCode,
   type TranslationKey,
 } from "@/lib/i18n";
+import {
+  pageCoverage,
+  translatePage,
+  type PageKey,
+} from "@/lib/i18n-pages";
 
 const STORAGE_KEY = "sendserene.locale";
 
@@ -19,10 +24,14 @@ interface LocaleState {
   setLocale: (l: LocaleCode) => void;
   /** Read the saved preference. Call once, from a mount effect. */
   hydrate: () => void;
-  /** Translate a key in the current locale. */
+  /** Translate an interface string in the current locale. */
   t: (key: TranslationKey) => string;
+  /** Translate page copy (hero, page headers) in the current locale. */
+  tp: (key: PageKey) => string;
   /** How much of the interface the current locale covers, 0 to 1. */
   coverage: () => number;
+  /** True when the current locale still shows some English. */
+  isPartial: () => boolean;
 }
 
 /**
@@ -71,5 +80,13 @@ export const useLocale = create<LocaleState>((set, get) => ({
   },
 
   t: (key) => translate(get().locale, key),
-  coverage: () => localeCoverage(get().locale),
+  tp: (key) => translatePage(get().locale, key),
+
+  // Combined across the interface strings and the page copy, so the figure
+  // shown in the language menu reflects what a visitor actually sees.
+  coverage: () => {
+    const l = get().locale;
+    return (localeCoverage(l) + pageCoverage(l)) / 2;
+  },
+  isPartial: () => get().coverage() < 0.999,
 }));

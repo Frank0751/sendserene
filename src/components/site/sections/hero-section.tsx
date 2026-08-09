@@ -1,12 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 import { hero } from "@/lib/site-content";
+import { useLocale } from "@/hooks/use-locale";
 import { ArrowRight, Mic, FileText, ShieldCheck, Languages } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const { ref, visible } = useReveal();
+  const { locale, tp, hydrate } = useLocale();
+
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
+
+  // The English headline is set as three lines with an italic accent on the
+  // last. That typographic structure does not survive translation, word
+  // order differs, so other languages get the title as a single string.
+  const isEnglish = locale === "en";
 
   return (
     <section id="top" className="relative overflow-hidden paper-grain min-h-screen flex flex-col justify-center">
@@ -28,31 +40,37 @@ export function HeroSection() {
           <div ref={ref} className={cn("reveal", visible && "is-visible")}>
             <p className="eyebrow flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-clay" />
-              {hero.eyebrow}
+              {tp("hero.eyebrow")}
             </p>
 
             <h1 className="display mt-5 text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] text-ink">
-              {hero.titleLines[0]}
-              <br />
-              {hero.titleLines[1]}{" "}
-              <span className="inline-block">
-                <em className="accent">{hero.titleLines[2].replace(".", "")}</em>
-                <span className="text-ink">.</span>
-              </span>
+              {isEnglish ? (
+                <>
+                  {hero.titleLines[0]}
+                  <br />
+                  {hero.titleLines[1]}{" "}
+                  <span className="inline-block">
+                    <em className="accent">{hero.titleLines[2].replace(".", "")}</em>
+                    <span className="text-ink">.</span>
+                  </span>
+                </>
+              ) : (
+                tp("hero.title")
+              )}
             </h1>
 
             <p className="mt-6 text-[1.075rem] sm:text-[1.15rem] leading-[1.65] text-ink-mid font-serif max-w-[34rem]">
-              {hero.lede}
+              {tp("hero.lede")}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="/pricing" className="btn-primary text-[15px]">
-                {hero.primaryCta}
+                {tp("hero.cta1")}
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a href="/evidence" className="btn-ghost text-[15px]">
                 <FileText className="h-4 w-4" />
-                {hero.secondaryCta}
+                {tp("hero.cta2")}
               </a>
             </div>
 

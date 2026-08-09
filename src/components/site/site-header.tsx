@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, Globe, Accessibility, ChevronDown, BookOpen, Clock, FileText, LifeBuoy } from "lucide-react";
+import { Menu, X, Globe, Accessibility, ChevronDown, Clock, FileText, LifeBuoy, Scale } from "lucide-react";
 import { nav, site } from "@/lib/site-content";
 import { useA11y } from "@/hooks/use-a11y";
 import { useLocale } from "@/hooks/use-locale";
@@ -10,9 +10,9 @@ import type { TranslationKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 const resourceLinks = [
-  { label: "Glossary", href: "/glossary", icon: BookOpen, desc: "SEND terms, defined", key: "nav.glossary" as TranslationKey },
   { label: "Timescales", href: "/timescales", icon: Clock, desc: "The legal clock", key: "nav.timescales" as TranslationKey },
   { label: "EHCP sections", href: "/ehcp", icon: FileText, desc: "What each part means", key: "nav.ehcp" as TranslationKey },
+  { label: "How we compare", href: "/#comparison", icon: Scale, desc: "Against a notebook or a folder", key: "nav.compare" as TranslationKey },
   { label: "Expert help", href: "/decoder", icon: LifeBuoy, desc: "IPSEA, SENDIASS & more", key: "nav.expertHelp" as TranslationKey },
 ];
 
@@ -116,18 +116,15 @@ export function SiteHeader() {
               )}
             </div>
 
-            <a
-              href="/pricing"
-              className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
-            >
-              {t("nav.pricing")}
-            </a>
-            <a
-              href="/faq"
-              className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
-            >
-              {t("nav.faq")}
-            </a>
+            {nav.slice(5).map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
+              >
+                {t(item.key)}
+              </a>
+            ))}
           </nav>
 
           {/* Actions */}

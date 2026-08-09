@@ -1,13 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useLocale } from "@/hooks/use-locale";
+import type { PageKey } from "@/lib/i18n-pages";
 
 interface PageHeaderProps {
+  /** English source strings, used when no translation key is given. */
   eyebrow: string;
   title: string;
   body?: string;
   bgImage?: string;
+  /**
+   * Translation keys for this page's header. When supplied, the header
+   * renders in the visitor's chosen language and falls back to the English
+   * props above for anything not yet translated.
+   */
+  eyebrowKey?: PageKey;
+  titleKey?: PageKey;
+  bodyKey?: PageKey;
 }
 
 /**
@@ -15,8 +26,24 @@ interface PageHeaderProps {
  * Includes a back-to-home link, eyebrow, title, body.
  * Optionally blends a background image into the hero.
  */
-export function PageHeader({ eyebrow, title, body, bgImage }: PageHeaderProps) {
-  const { t } = useLocale();
+export function PageHeader({
+  eyebrow,
+  title,
+  body,
+  bgImage,
+  eyebrowKey,
+  titleKey,
+  bodyKey,
+}: PageHeaderProps) {
+  const { t, tp, hydrate } = useLocale();
+
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
+
+  const shownEyebrow = eyebrowKey ? tp(eyebrowKey) : eyebrow;
+  const shownTitle = titleKey ? tp(titleKey) : title;
+  const shownBody = bodyKey ? tp(bodyKey) : body;
   return (
     <section className="relative overflow-hidden paper-grain min-h-[70vh] flex flex-col justify-center border-b border-paper-3">
       {/* Optional background image, blended */}
@@ -52,13 +79,13 @@ export function PageHeader({ eyebrow, title, body, bgImage }: PageHeaderProps) {
           <ArrowLeft className="h-3.5 w-3.5" />
           {t("common.backToHome")}
         </a>
-        <p className="eyebrow">{eyebrow}</p>
+        <p className="eyebrow">{shownEyebrow}</p>
         <h1 className="display mt-4 text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] text-ink max-w-[18ch]">
-          {title}
+          {shownTitle}
         </h1>
-        {body && (
+        {shownBody && (
           <p className="mt-5 font-serif text-[1.05rem] leading-[1.7] text-ink-mid max-w-2xl">
-            {body}
+            {shownBody}
           </p>
         )}
       </div>

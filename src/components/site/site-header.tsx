@@ -38,7 +38,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Wordmark */}
-          <a href="#top" className="flex items-center gap-2.5 shrink-0 group">
+          <a href="/" className="flex items-center gap-2.5 shrink-0 group">
             <span
               className="grid h-9 w-9 place-items-center rounded-[8px] text-paper"
               style={{ background: "var(--teal)" }}
@@ -132,7 +132,7 @@ export function SiteHeader() {
               <Accessibility className="h-[18px] w-[18px]" />
             </button>
             <a
-              href="#languages"
+              href="/security#languages"
               className="hidden sm:flex items-center gap-1.5 h-9 px-3 rounded-md text-[13px] font-display text-ink-2 hover:text-teal hover:bg-paper-2/60 transition-colors"
               aria-label="Change language"
             >
@@ -178,14 +178,23 @@ export function SiteHeader() {
               >
                 <Accessibility className="h-4 w-4" /> Accessibility
               </button>
+              {/* The desktop language link is hidden below sm, so phone users
+                  need their own way through to the languages section. */}
               <a
-                href="/pricing"
+                href="/security#languages"
                 onClick={() => setOpen(false)}
-                className="btn-primary flex-1 justify-center text-sm !py-2.5"
+                className="btn-ghost flex-1 justify-center text-sm !py-2.5"
               >
-                Start free
+                <Globe className="h-4 w-4" /> Languages
               </a>
             </div>
+            <a
+              href="/pricing"
+              onClick={() => setOpen(false)}
+              className="btn-primary justify-center text-sm !py-2.5 mt-2"
+            >
+              Start free
+            </a>
           </nav>
         </div>
       )}

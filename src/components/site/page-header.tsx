@@ -45,7 +45,7 @@ export function PageHeader({ eyebrow, title, body, bgImage }: PageHeaderProps) {
       <div className="relative mx-auto max-w-[1180px] px-5 sm:px-8 py-16 lg:py-20 w-full">
         <a
           href="/"
-          className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-light hover:text-teal transition-colors mb-6"
+          className="inline-flex items-center gap-1.5 min-h-6 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-light hover:text-teal transition-colors mb-5"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           Back to home

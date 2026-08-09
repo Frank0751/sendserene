@@ -122,30 +122,38 @@ export function ComparisonSection() {
 
             {/* Mobile dots + nav */}
             <div className="flex items-center justify-center gap-4 mt-4">
+              {/* Targets are kept to at least 24x24 CSS px for WCAG 2.2 AA
+                  (2.5.8 Target Size). The dots stay visually small; the
+                  tappable area around them is what grows. */}
               <button
                 onClick={() => setMobileRow(Math.max(0, mobileRow - 1))}
                 disabled={mobileRow === 0}
-                className="font-mono text-[11px] uppercase tracking-wider text-teal disabled:opacity-30"
+                className="inline-flex items-center min-h-6 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-teal disabled:opacity-30"
               >
                 ← Prev
               </button>
-              <div className="flex gap-1.5">
+              <div className="flex">
                 {comparison.rows.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setMobileRow(i)}
-                    className={cn(
-                      "h-1.5 rounded-full transition-all",
-                      i === mobileRow ? "w-6 bg-teal" : "w-1.5 bg-paper-3"
-                    )}
+                    className="grid h-6 w-6 place-items-center"
                     aria-label={`Row ${i + 1}`}
-                  />
+                    aria-current={i === mobileRow ? "true" : undefined}
+                  >
+                    <span
+                      className={cn(
+                        "block h-1.5 rounded-full transition-all",
+                        i === mobileRow ? "w-5 bg-teal" : "w-1.5 bg-paper-3"
+                      )}
+                    />
+                  </button>
                 ))}
               </div>
               <button
                 onClick={() => setMobileRow(Math.min(comparison.rows.length - 1, mobileRow + 1))}
                 disabled={mobileRow === comparison.rows.length - 1}
-                className="font-mono text-[11px] uppercase tracking-wider text-teal disabled:opacity-30"
+                className="inline-flex items-center min-h-6 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-teal disabled:opacity-30"
               >
                 Next →
               </button>

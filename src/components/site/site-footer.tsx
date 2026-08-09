@@ -50,7 +50,7 @@ export function SiteFooter() {
                       {...("external" in link && link.external
                         ? { target: "_blank", rel: "noreferrer noopener" }
                         : {})}
-                      className="text-[13.5px] font-serif text-ink-2 hover:text-teal transition-colors"
+                      className="inline-flex items-center min-h-6 py-0.5 text-[13.5px] font-serif text-ink-2 hover:text-teal transition-colors"
                     >
                       {link.label}
                       {"external" in link && link.external && (

@@ -202,7 +202,10 @@ strong.accent {
 }
 
 .btn-primary {
-  background: #b85c38;
+  /* Darkened from #b85c38, which gave only 4.21:1 against the #faf6ed label
+     and failed WCAG AA for normal-size text. #ad5433 reaches 4.76:1 and keeps
+     the terracotta character. */
+  background: #ad5433;
   color: #faf6ed;
   font-family: var(--font-display), sans-serif;
   font-weight: 500;

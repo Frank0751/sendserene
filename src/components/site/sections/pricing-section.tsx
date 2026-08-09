@@ -93,7 +93,7 @@ export function PricingSection() {
                       max={6}
                       value={children}
                       onChange={(e) => setChildren(Number(e.target.value))}
-                      className="flex-1 accent-[var(--teal)]"
+                      className="flex-1 h-6 accent-[var(--teal)]"
                       aria-label="Number of children"
                     />
                     <button

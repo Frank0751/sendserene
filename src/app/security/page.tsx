@@ -9,6 +9,19 @@ import { CollaboratorsSection } from "@/components/site/sections/collaborators-s
 import { LanguagesSection } from "@/components/site/sections/languages-section";
 import { security } from "@/lib/site-content";
 
+export const metadata = {
+  title: "Security and data protection, special category data treated like it",
+  description:
+    "UK data residency in the AWS London region, row level security, encryption at rest and in transit, and a clear international transfer protocol.",
+  alternates: { canonical: "/security" },
+  openGraph: {
+    title: "Security and data protection, special category data treated like it",
+    description: "UK data residency in the AWS London region, row level security, encryption at rest and in transit, and a clear international transfer protocol.",
+    url: "/security",
+  },
+};
+
+
 export default function SecurityPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

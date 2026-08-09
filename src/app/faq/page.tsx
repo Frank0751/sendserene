@@ -13,6 +13,19 @@ import { OnboardingSection } from "@/components/site/sections/onboarding-section
 import { AdminPanelSection } from "@/components/site/sections/admin-panel-section";
 import { faqs } from "@/lib/site-content";
 
+export const metadata = {
+  title: "FAQ, what SENDSerene is and what it is not",
+  description:
+    "Straight answers about how SENDSerene works, what it deliberately does not do, and who built it.",
+  alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "FAQ, what SENDSerene is and what it is not",
+    description: "Straight answers about how SENDSerene works, what it deliberately does not do, and who built it.",
+    url: "/faq",
+  },
+};
+
+
 export default function FaqPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

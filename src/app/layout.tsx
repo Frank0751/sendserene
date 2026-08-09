@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "jargon decoder",
   ],
   authors: [{ name: "Zifankrah Ltd" }],
+  // Home page canonical. Every sub-page sets its own via `alternates`,
+  // resolved against metadataBase above.
+  alternates: { canonical: "/" },
   openGraph: {
     title: "SENDSerene, A calmer way through your child's SEND case",
     description:

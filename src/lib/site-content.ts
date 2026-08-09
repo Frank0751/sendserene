@@ -14,16 +14,20 @@ export const site = {
   domain: "sendserene.co.uk",
 };
 
+/**
+ * `label` is the English source string. `key` points at the entry in
+ * lib/i18n.ts so the header can render the label in the chosen language.
+ */
 export const nav = [
-  { label: "The problem", href: "/#problem" },
-  { label: "Compare", href: "/#comparison" },
-  { label: "Voice log", href: "/voice-log" },
-  { label: "Decoder", href: "/decoder" },
-  { label: "Evidence", href: "/evidence" },
-  { label: "Glossary", href: "/glossary" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-];
+  { label: "The problem", href: "/#problem", key: "nav.problem" },
+  { label: "Compare", href: "/#comparison", key: "nav.compare" },
+  { label: "Voice log", href: "/voice-log", key: "nav.voiceLog" },
+  { label: "Decoder", href: "/decoder", key: "nav.decoder" },
+  { label: "Evidence", href: "/evidence", key: "nav.evidence" },
+  { label: "Glossary", href: "/glossary", key: "nav.glossary" },
+  { label: "Pricing", href: "/pricing", key: "nav.pricing" },
+  { label: "FAQ", href: "/faq", key: "nav.faq" },
+] as const;
 
 export const languages = [
   { code: "en", label: "English", native: "English", sample: "Your child's SEND case, one calm place." },

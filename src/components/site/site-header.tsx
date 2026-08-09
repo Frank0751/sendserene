@@ -4,13 +4,16 @@ import { useEffect, useState } from "react";
 import { Menu, X, Globe, Accessibility, ChevronDown, BookOpen, Clock, FileText, LifeBuoy } from "lucide-react";
 import { nav, site } from "@/lib/site-content";
 import { useA11y } from "@/hooks/use-a11y";
+import { useLocale } from "@/hooks/use-locale";
+import { LanguageSwitcher } from "./language-switcher";
+import type { TranslationKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 const resourceLinks = [
-  { label: "Glossary", href: "/glossary", icon: BookOpen, desc: "SEND terms, defined" },
-  { label: "Timescales", href: "/timescales", icon: Clock, desc: "The legal clock" },
-  { label: "EHCP sections", href: "/ehcp", icon: FileText, desc: "What each part means" },
-  { label: "Expert help", href: "/decoder", icon: LifeBuoy, desc: "IPSEA, SENDIASS & more" },
+  { label: "Glossary", href: "/glossary", icon: BookOpen, desc: "SEND terms, defined", key: "nav.glossary" as TranslationKey },
+  { label: "Timescales", href: "/timescales", icon: Clock, desc: "The legal clock", key: "nav.timescales" as TranslationKey },
+  { label: "EHCP sections", href: "/ehcp", icon: FileText, desc: "What each part means", key: "nav.ehcp" as TranslationKey },
+  { label: "Expert help", href: "/decoder", icon: LifeBuoy, desc: "IPSEA, SENDIASS & more", key: "nav.expertHelp" as TranslationKey },
 ];
 
 export function SiteHeader() {
@@ -18,6 +21,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const setOpenPanel = useA11y((s) => s.setOpen);
+  const { t, hydrate } = useLocale();
+
+  // Pick up the stored language choice so it persists across pages.
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -64,7 +73,7 @@ export function SiteHeader() {
                 href={item.href}
                 className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
               >
-                {item.label}
+                {t(item.key)}
               </a>
             ))}
 
@@ -78,7 +87,7 @@ export function SiteHeader() {
                 className="flex items-center gap-1 px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
                 aria-expanded={resourcesOpen}
               >
-                Resources
+                {t("nav.resources")}
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", resourcesOpen && "rotate-180")} />
               </button>
               {resourcesOpen && (
@@ -96,7 +105,7 @@ export function SiteHeader() {
                             <Icon className="h-4 w-4 text-teal group-hover:text-paper" />
                           </span>
                           <div className="min-w-0">
-                            <p className="font-display text-[13px] font-medium text-ink leading-tight">{r.label}</p>
+                            <p className="font-display text-[13px] font-medium text-ink leading-tight">{t(r.key)}</p>
                             <p className="font-serif text-[11.5px] text-ink-light mt-0.5">{r.desc}</p>
                           </div>
                         </a>
@@ -111,13 +120,13 @@ export function SiteHeader() {
               href="/pricing"
               className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
             >
-              Pricing
+              {t("nav.pricing")}
             </a>
             <a
               href="/faq"
               className="px-3 py-2 text-[13.5px] font-display text-ink-2 hover:text-teal transition-colors rounded-md hover:bg-paper-2/60"
             >
-              FAQ
+              {t("nav.faq")}
             </a>
           </nav>
 
@@ -126,26 +135,19 @@ export function SiteHeader() {
             <button
               onClick={() => setOpenPanel(true)}
               className="hidden sm:grid h-9 w-9 place-items-center rounded-md text-ink-2 hover:text-teal hover:bg-paper-2/60 transition-colors"
-              aria-label="Open accessibility settings"
-              title="Accessibility settings"
+              aria-label={t("header.accessibility")}
+              title={t("header.accessibility")}
             >
               <Accessibility className="h-[18px] w-[18px]" />
             </button>
-            <a
-              href="/security#languages"
-              className="hidden sm:flex items-center gap-1.5 h-9 px-3 rounded-md text-[13px] font-display text-ink-2 hover:text-teal hover:bg-paper-2/60 transition-colors"
-              aria-label="Change language"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="font-mono text-[11px] uppercase tracking-wider">EN</span>
-            </a>
+            <LanguageSwitcher className="hidden sm:block" />
             <a href="/pricing" className="btn-primary hidden sm:inline-flex text-[13.5px] !py-2 !px-4">
-              Start free
+              {t("header.startFree")}
             </a>
             <button
               onClick={() => setOpen(!open)}
               className="lg:hidden grid h-9 w-9 place-items-center rounded-md text-ink hover:bg-paper-2/60"
-              aria-label="Toggle menu"
+              aria-label={t("header.menu")}
               aria-expanded={open}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -165,35 +167,34 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="px-3 py-2.5 text-[15px] font-display text-ink-2 hover:text-teal hover:bg-paper-2/60 rounded-md"
               >
-                {item.label}
+                {t(item.key)}
               </a>
             ))}
-            <div className="flex gap-2 mt-2">
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  setOpenPanel(true);
-                }}
-                className="btn-ghost flex-1 justify-center text-sm !py-2.5"
-              >
-                <Accessibility className="h-4 w-4" /> Accessibility
-              </button>
-              {/* The desktop language link is hidden below sm, so phone users
-                  need their own way through to the languages section. */}
-              <a
-                href="/security#languages"
-                onClick={() => setOpen(false)}
-                className="btn-ghost flex-1 justify-center text-sm !py-2.5"
-              >
-                <Globe className="h-4 w-4" /> Languages
-              </a>
+
+            {/* The desktop switcher is hidden below sm, so phone users get
+                their own language control here. */}
+            <div className="flex items-center justify-between gap-2 mt-3 pt-3 border-t border-paper-3">
+              <span className="flex items-center gap-2 px-3 text-[13px] font-display text-ink-2">
+                <Globe className="h-4 w-4" /> {t("header.languages")}
+              </span>
+              <LanguageSwitcher />
             </div>
+
+            <button
+              onClick={() => {
+                setOpen(false);
+                setOpenPanel(true);
+              }}
+              className="btn-ghost justify-center text-sm !py-2.5 mt-2"
+            >
+              <Accessibility className="h-4 w-4" /> {t("header.accessibility")}
+            </button>
             <a
               href="/pricing"
               onClick={() => setOpen(false)}
               className="btn-primary justify-center text-sm !py-2.5 mt-2"
             >
-              Start free
+              {t("header.startFree")}
             </a>
           </nav>
         </div>

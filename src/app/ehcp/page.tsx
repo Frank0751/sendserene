@@ -9,6 +9,19 @@ import { VagueDetectorSection } from "@/components/site/sections/vague-detector-
 import { ProvisionTrackerSection } from "@/components/site/sections/provision-tracker-section";
 import { ehcpViewer } from "@/lib/site-content";
 
+export const metadata = {
+  title: "Inside an EHCP, what each section actually means",
+  description:
+    "An interactive walk through the sections of an Education, Health and Care Plan, including how to spot provision wording that commits nobody to anything.",
+  alternates: { canonical: "/ehcp" },
+  openGraph: {
+    title: "Inside an EHCP, what each section actually means",
+    description: "An interactive walk through the sections of an Education, Health and Care Plan, including how to spot provision wording that commits nobody to anything.",
+    url: "/ehcp",
+  },
+};
+
+
 export default function EhcpPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

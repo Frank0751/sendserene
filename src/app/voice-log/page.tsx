@@ -6,6 +6,19 @@ import { PageHeader } from "@/components/site/page-header";
 import { VoiceSection } from "@/components/site/sections/voice-section";
 import { voiceFeature } from "@/lib/site-content";
 
+export const metadata = {
+  title: "Voice log, record what happens in your own words",
+  description:
+    "Record observations about your child by voice. Transcribed, translated, and sorted into the four statutory SEND categories, ready for a review or tribunal.",
+  alternates: { canonical: "/voice-log" },
+  openGraph: {
+    title: "Voice log, record what happens in your own words",
+    description: "Record observations about your child by voice. Transcribed, translated, and sorted into the four statutory SEND categories, ready for a review or tribunal.",
+    url: "/voice-log",
+  },
+};
+
+
 export default function VoiceLogPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

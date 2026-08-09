@@ -7,6 +7,19 @@ import { GlossarySection } from "@/components/site/sections/glossary-section";
 import { EmailIngestionSection } from "@/components/site/sections/email-ingestion-section";
 import { glossary } from "@/lib/site-content";
 
+export const metadata = {
+  title: "SEND glossary, the terms defined without the jargon",
+  description:
+    "Plain-English definitions of the SEND terms councils and schools use, available across sixteen languages.",
+  alternates: { canonical: "/glossary" },
+  openGraph: {
+    title: "SEND glossary, the terms defined without the jargon",
+    description: "Plain-English definitions of the SEND terms councils and schools use, available across sixteen languages.",
+    url: "/glossary",
+  },
+};
+
+
 export default function GlossaryPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

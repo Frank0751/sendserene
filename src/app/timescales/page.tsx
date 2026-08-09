@@ -7,6 +7,19 @@ import { TimescaleSection } from "@/components/site/sections/timescale-section";
 import { DeadlineCalcSection } from "@/components/site/sections/deadline-calc-section";
 import { timescaleTable } from "@/lib/site-content";
 
+export const metadata = {
+  title: "Statutory timescales, what the council owes you and by when",
+  description:
+    "The legal SEND timescales, plus a calculator that turns one trigger date into every deadline that follows from it.",
+  alternates: { canonical: "/timescales" },
+  openGraph: {
+    title: "Statutory timescales, what the council owes you and by when",
+    description: "The legal SEND timescales, plus a calculator that turns one trigger date into every deadline that follows from it.",
+    url: "/timescales",
+  },
+};
+
+
 export default function TimescalesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">

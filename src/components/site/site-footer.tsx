@@ -1,8 +1,18 @@
 "use client";
 
 import { footer, site } from "@/lib/site-content";
+import { useLocale } from "@/hooks/use-locale";
+import type { TranslationKey } from "@/lib/i18n";
+
+/** Footer column headings map onto i18n keys by their English title. */
+const COLUMN_KEYS: Record<string, TranslationKey> = {
+  Product: "footer.product",
+  "Get help": "footer.getHelp",
+  Company: "footer.company",
+};
 
 export function SiteFooter() {
+  const { t } = useLocale();
   return (
     <footer className="mt-auto border-t border-paper-3 bg-paper-2/50">
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-14 lg:py-20">
@@ -40,7 +50,7 @@ export function SiteFooter() {
           {footer.columns.map((col) => (
             <div key={col.title}>
               <h3 className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-light mb-3.5">
-                {col.title}
+                {COLUMN_KEYS[col.title] ? t(COLUMN_KEYS[col.title]) : col.title}
               </h3>
               <ul className="space-y-2.5">
                 {col.links.map((link) => (

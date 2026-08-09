@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft } from "lucide-react";
+import { useLocale } from "@/hooks/use-locale";
 
 interface PageHeaderProps {
   eyebrow: string;
@@ -15,6 +16,7 @@ interface PageHeaderProps {
  * Optionally blends a background image into the hero.
  */
 export function PageHeader({ eyebrow, title, body, bgImage }: PageHeaderProps) {
+  const { t } = useLocale();
   return (
     <section className="relative overflow-hidden paper-grain min-h-[70vh] flex flex-col justify-center border-b border-paper-3">
       {/* Optional background image, blended */}
@@ -48,7 +50,7 @@ export function PageHeader({ eyebrow, title, body, bgImage }: PageHeaderProps) {
           className="inline-flex items-center gap-1.5 min-h-6 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-light hover:text-teal transition-colors mb-5"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
-          Back to home
+          {t("common.backToHome")}
         </a>
         <p className="eyebrow">{eyebrow}</p>
         <h1 className="display mt-4 text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] text-ink max-w-[18ch]">

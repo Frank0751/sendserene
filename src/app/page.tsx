@@ -6,6 +6,7 @@ import { ScrollUtilities } from "@/components/site/scroll-utilities";
 import { HeroSection } from "@/components/site/sections/hero-section";
 import { StatBand, ProblemSection } from "@/components/site/sections/problem-section";
 import { ComparisonSection } from "@/components/site/sections/comparison-section";
+import { WhereYouAreSection } from "@/components/site/sections/where-you-are-section";
 import { PillarsSection } from "@/components/site/sections/pillars-section";
 import { FinalCtaSection } from "@/components/site/sections/final-cta-section";
 import { HomeFeatureGrid } from "@/components/site/home-feature-grid";
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
         <StatBand />
         <ProblemSection />
+        <WhereYouAreSection />
         <ComparisonSection />
         <PillarsSection />
         <HomeFeatureGrid />

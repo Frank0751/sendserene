@@ -105,7 +105,7 @@ export function AccessibilityPanel() {
             <ToggleRow
               icon={<Eye className="h-4 w-4 text-teal" />}
               label="Dyslexia-friendly font"
-              desc="Wider spacing, even line height."
+              desc="Atkinson Hyperlegible, plus wider spacing."
               on={s.dyslexiaFont}
               onClick={s.toggleDyslexia}
             />

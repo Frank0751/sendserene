@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Spectral, JetBrains_Mono } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Spectral,
+  JetBrains_Mono,
+  Atkinson_Hyperlegible,
+} from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { faqs } from "@/lib/site-content";
@@ -26,9 +31,23 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+/**
+ * Atkinson Hyperlegible, from the Braille Institute, designed so that
+ * characters that commonly get confused (I/l/1, O/0, b/d) stay
+ * distinguishable. Loaded only to back the dyslexia-friendly toggle in the
+ * accessibility panel; it is not part of the default type stack.
+ */
+const atkinson = Atkinson_Hyperlegible({
+  variable: "--font-hyperlegible",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://sendserene.co.uk"),
-  title: "SENDSerene, A calmer way through your child's SEND case",
+  title: "SENDSerene, the SEND system in the language you think in",
   description:
     "SENDSerene helps UK parents of children with special educational needs and disabilities record what's happening, understand official letters, and produce a clear evidence pack when it matters. Sixteen languages. Built for the 20-week clock.",
   keywords: [
@@ -48,16 +67,16 @@ export const metadata: Metadata = {
   // resolved against metadataBase above.
   alternates: { canonical: "/" },
   openGraph: {
-    title: "SENDSerene, A calmer way through your child's SEND case",
+    title: "SENDSerene, the SEND system in the language you think in",
     description:
       "Record what's happening. Understand the letters. Prove your case. Sixteen languages, UK data residency, built for the 20-week statutory clock.",
     siteName: "SENDSerene",
     type: "website",
-    images: [{ url: "/img/og-card.png", width: 1344, height: 768, alt: "SENDSerene, A calmer way through your child's SEND case" }],
+    images: [{ url: "/img/og-card.png", width: 1344, height: 768, alt: "SENDSerene, the SEND system in the language you think in" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SENDSerene, A calmer way through your child's SEND case",
+    title: "SENDSerene, the SEND system in the language you think in",
     description:
       "Record what's happening. Understand the letters. Prove your case.",
     images: ["/img/og-card.png"],
@@ -113,7 +132,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${bricolage.variable} ${spectral.variable} ${jetbrains.variable} font-serif antialiased bg-paper text-ink`}
+        className={`${bricolage.variable} ${spectral.variable} ${jetbrains.variable} ${atkinson.variable} font-serif antialiased bg-paper text-ink`}
       >
         {children}
         <Toaster />

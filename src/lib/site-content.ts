@@ -7,7 +7,7 @@
 export const site = {
   name: "SENDSerene",
   wordmark: "SENDSerene",
-  tagline: "A calmer way through your child's SEND case.",
+  tagline: "The SEND system, in the language you think in.",
   client: "Zifankrah Ltd",
   developer: "KoomBei Digital Limited, Accra",
   projectRef: "KB-2026-007",
@@ -49,13 +49,15 @@ export const languages = [
 
 export const hero = {
   eyebrow: "For UK parents navigating SEND",
-  titleLines: ["Your child's", "SEND case,", "one calm place."],
+  // Deliberately leads on the two things no other UK SEND tool does:
+  // capture in the parent's own language, and decode the system's.
+  titleLines: ["Speak your language.", "We'll handle", "theirs."],
   lede:
-    "Record what's happening, in your own words and your own language. Understand the letters the council sends you. And when a review or tribunal comes, hand over a clear, dated evidence pack instead of a shoebox of paper.",
+    "Say what happened out loud, in any of sixteen languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
   primaryCta: "Start a free account",
   secondaryCta: "See an evidence pack",
   trust: [
-    "Sixteen languages, including Somali, Urdu, Punjabi, Bengali, Polish, Arabic, French and more",
+    "Sixteen languages, including Somali, Urdu, Punjabi, Bengali, Polish and Arabic",
     "UK data residency. Stored in the London region, not shipped overseas.",
     "Built with Zifankrah Ltd, a SEND-parent-led organisation.",
   ],
@@ -1438,6 +1440,60 @@ export const pricing = {
     cta: "Start Premium",
     note: "Premium covers two children. Each additional child adds £2/month or £20/year.",
   },
+};
+
+/**
+ * Stage-based entry point for the home page.
+ *
+ * Framed around the statutory clock rather than a generic "where are you in
+ * the process". Each stage says what SENDSerene does for you at that point
+ * and routes you straight there. Deliberately does not assert specific
+ * statutory dates, the timescale table on /timescales is the single source
+ * for those and Zifankrah Ltd validates it.
+ */
+export const whereYouAre = {
+  eyebrow: "Start where you actually are",
+  title: "The clock is already running. Where are you on it?",
+  body: "Most parents find SENDSerene partway through, not at the beginning. Pick the line that sounds like your week. Nothing here needs an account.",
+  stages: [
+    {
+      marker: "Not yet asked",
+      title: "You haven't requested an assessment",
+      body: "No statutory clock is running yet, which makes this the best time to start. Every observation you log now becomes evidence the day you do ask.",
+      action: "Start logging what you notice",
+      href: "/voice-log",
+    },
+    {
+      marker: "Clock started",
+      title: "You've asked, and you're waiting",
+      body: "The council owes you a decision within a fixed statutory window. Put the date on your letter into the calculator and every deadline that follows is worked out for you.",
+      action: "Work out your dates",
+      href: "/timescales",
+    },
+    {
+      marker: "They said no",
+      title: "You've been refused an assessment",
+      body: "A refusal is not the end, and appeal deadlines are short. Paste the letter in and you'll see what it means, what your options are, and by when.",
+      action: "Decode the refusal",
+      href: "/decoder",
+    },
+    {
+      marker: "Draft arrived",
+      title: "A draft plan has landed",
+      body: "This is the moment the wording matters most. Section F is where support is either committed to or quietly avoided. We flag the phrases that bind nobody to anything.",
+      action: "Check the wording",
+      href: "/ehcp",
+    },
+    {
+      marker: "Review or tribunal",
+      title: "A meeting is coming",
+      body: "A year of notes, filtered to what matters for this meeting, numbered so you can cite them, in a pack you can hand over.",
+      action: "Build the evidence pack",
+      href: "/evidence",
+    },
+  ],
+  footnote:
+    "Dates and timescales shown in SENDSerene are illustrative and validated by Zifankrah Ltd. Always check the deadline on the letter you received.",
 };
 
 export const deadlineCalc = {

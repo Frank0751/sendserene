@@ -312,11 +312,22 @@ strong.accent {
 }
 
 /* Accessibility modes */
+/* Dyslexia-friendly reading mode.
+   Atkinson Hyperlegible (Braille Institute) differentiates the character
+   pairs that are most often confused, I/l/1, O/0, b/d/p/q, so it earns its
+   place here rather than simply swapping to another display face. Paired
+   with looser tracking, word spacing and leading, which is what actually
+   moves the needle for dyslexic readers. */
 body.a11y-dyslexia {
-  font-family: var(--font-display), sans-serif;
-  letter-spacing: 0.01em;
-  word-spacing: 0.08em;
-  line-height: 1.7;
+  font-family: var(--font-hyperlegible), var(--font-display), sans-serif;
+  letter-spacing: 0.02em;
+  word-spacing: 0.12em;
+  line-height: 1.8;
+}
+body.a11y-dyslexia .display,
+body.a11y-dyslexia .font-serif,
+body.a11y-dyslexia .font-mono {
+  font-family: var(--font-hyperlegible), sans-serif;
 }
 body.a11y-dyslexia h1,
 body.a11y-dyslexia h2,

@@ -39,9 +39,9 @@ type PageDict = Partial<Record<PageKey, string>>;
 
 const en: Record<PageKey, string> = {
   "hero.eyebrow": "For UK parents navigating SEND",
-  "hero.title": "Your child's SEND case, one calm place.",
+  "hero.title": "Speak your language. We'll handle theirs.",
   "hero.lede":
-    "Record what's happening, in your own words and your own language. Understand the letters the council sends you. And when a review or tribunal comes, hand over a clear, dated evidence pack instead of a shoebox of paper.",
+    "Say what happened out loud, in any of sixteen languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
   "hero.cta1": "Start a free account",
   "hero.cta2": "See an evidence pack",
 
@@ -100,9 +100,9 @@ const en: Record<PageKey, string> = {
 
 const so: PageDict = {
   "hero.eyebrow": "Waalidiinta UK ee la tacaalaya SEND",
-  "hero.title": "Kiiska SEND ee ilmahaaga, hal meel oo deggan.",
+  "hero.title": "Ku hadal luqaddaada. Annaga ayaa u qaban doonna tooda.",
   "hero.lede":
-    "Duub waxa dhacaya, adigoo isticmaalaya ereyadaada iyo luqaddaada. Faham warqadaha golaha degmadu kuu soo diro. Marka dib-u-eegis ama maxkamad timaado, wax bixi xirmo caddayn oo cad oo taariikhaysan, halkii aad ka bixin lahayd sanduuq warqado ah.",
+    "Cod dheer ku sheeg waxa dhacay, mid ka mid ah lix iyo toban luqadood. SENDSerene way qortaa, taariikh u dhigtaa, wayna kaydisaa. Markaas, marka golaha degmadu kugu soo qoro luqad si ula kac ah u adag, waxay kuu sheegaysaa waxa ay dhab ahaan ula jeedaan iyo waxa aad samayn karto iyo goorta.",
   "hero.cta1": "Furo akoon bilaash ah",
   "hero.cta2": "Arag xirmada caddaynta",
 
@@ -159,9 +159,9 @@ const so: PageDict = {
 
 const ur: PageDict = {
   "hero.eyebrow": "SEND کے سفر میں برطانوی والدین کے لیے",
-  "hero.title": "آپ کے بچے کا SEND کیس، ایک پرسکون جگہ۔",
+  "hero.title": "آپ اپنی زبان بولیں۔ ان کی زبان ہم سنبھال لیں گے۔",
   "hero.lede":
-    "جو کچھ ہو رہا ہے اسے اپنے الفاظ اور اپنی زبان میں ریکارڈ کریں۔ کونسل کے خطوط کو سمجھیں۔ اور جب جائزہ یا ٹریبونل آئے، کاغذوں کے ڈھیر کے بجائے ایک واضح، تاریخ شدہ شواہد کا مجموعہ پیش کریں۔",
+    "جو ہوا وہ بول کر بتا دیں، سولہ زبانوں میں سے کسی ایک میں۔ SENDSerene اسے لکھ لیتا ہے، تاریخ ڈالتا ہے اور محفوظ کر دیتا ہے۔ پھر جب کونسل جان بوجھ کر مشکل زبان میں جواب دے، یہ آپ کو بتاتا ہے کہ اصل میں ان کا مطلب کیا ہے اور آپ کو کب تک کیا کرنا ہے۔",
   "hero.cta1": "مفت اکاؤنٹ شروع کریں",
   "hero.cta2": "شواہد کا مجموعہ دیکھیں",
 
@@ -218,9 +218,9 @@ const ur: PageDict = {
 
 const pa: PageDict = {
   "hero.eyebrow": "SEND ਨਾਲ ਜੂਝ ਰਹੇ ਯੂਕੇ ਦੇ ਮਾਪਿਆਂ ਲਈ",
-  "hero.title": "ਤੁਹਾਡੇ ਬੱਚੇ ਦਾ SEND ਕੇਸ, ਇੱਕ ਸ਼ਾਂਤ ਥਾਂ।",
+  "hero.title": "ਤੁਸੀਂ ਆਪਣੀ ਭਾਸ਼ਾ ਬੋਲੋ। ਉਹਨਾਂ ਦੀ ਅਸੀਂ ਸੰਭਾਲਾਂਗੇ।",
   "hero.lede":
-    "ਜੋ ਹੋ ਰਿਹਾ ਹੈ ਉਹ ਆਪਣੇ ਸ਼ਬਦਾਂ ਅਤੇ ਆਪਣੀ ਭਾਸ਼ਾ ਵਿੱਚ ਰਿਕਾਰਡ ਕਰੋ। ਕੌਂਸਲ ਦੀਆਂ ਚਿੱਠੀਆਂ ਸਮਝੋ। ਅਤੇ ਜਦੋਂ ਸਮੀਖਿਆ ਜਾਂ ਟ੍ਰਿਬਿਊਨਲ ਆਵੇ, ਕਾਗਜ਼ਾਂ ਦੇ ਢੇਰ ਦੀ ਥਾਂ ਸਾਫ਼, ਤਾਰੀਖ਼ ਵਾਲਾ ਸਬੂਤ ਪੈਕ ਦਿਓ।",
+    "ਜੋ ਹੋਇਆ ਉਹ ਬੋਲ ਕੇ ਦੱਸੋ, ਸੋਲਾਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚੋਂ ਕਿਸੇ ਇੱਕ ਵਿੱਚ। SENDSerene ਉਸਨੂੰ ਲਿਖ ਲੈਂਦਾ ਹੈ, ਤਾਰੀਖ਼ ਪਾਉਂਦਾ ਹੈ ਤੇ ਸੰਭਾਲ ਲੈਂਦਾ ਹੈ। ਫਿਰ ਜਦੋਂ ਕੌਂਸਲ ਜਾਣ-ਬੁੱਝ ਕੇ ਔਖੀ ਭਾਸ਼ਾ ਵਿੱਚ ਜਵਾਬ ਦੇਵੇ, ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਅਸਲ ਵਿੱਚ ਮਤਲਬ ਕੀ ਹੈ ਤੇ ਤੁਹਾਨੂੰ ਕਦੋਂ ਤੱਕ ਕੀ ਕਰਨਾ ਹੈ।",
   "hero.cta1": "ਮੁਫ਼ਤ ਖਾਤਾ ਸ਼ੁਰੂ ਕਰੋ",
   "hero.cta2": "ਸਬੂਤ ਪੈਕ ਵੇਖੋ",
 
@@ -277,9 +277,9 @@ const pa: PageDict = {
 
 const bn: PageDict = {
   "hero.eyebrow": "SEND নিয়ে পথ চলা যুক্তরাজ্যের অভিভাবকদের জন্য",
-  "hero.title": "আপনার সন্তানের SEND মামলা, একটি শান্ত জায়গায়।",
+  "hero.title": "আপনি নিজের ভাষায় বলুন। ওদের ভাষা আমরা সামলাব।",
   "hero.lede":
-    "যা ঘটছে তা নিজের ভাষায়, নিজের কথায় রেকর্ড করুন। কাউন্সিলের চিঠি বুঝুন। আর যখন রিভিউ বা ট্রাইব্যুনাল আসে, কাগজের স্তূপের বদলে একটি পরিষ্কার, তারিখযুক্ত প্রমাণ প্যাক তুলে দিন।",
+    "যা ঘটেছে মুখে বলুন, ষোলোটি ভাষার যেকোনো একটিতে। SENDSerene তা লিখে নেয়, তারিখ দেয় এবং গুছিয়ে রাখে। তারপর কাউন্সিল যখন ইচ্ছে করেই কঠিন ভাষায় উত্তর দেয়, এটি আপনাকে বলে দেয় ওরা আসলে কী বোঝাতে চাইছে এবং আপনাকে কবের মধ্যে কী করতে হবে।",
   "hero.cta1": "বিনামূল্যে অ্যাকাউন্ট খুলুন",
   "hero.cta2": "প্রমাণ প্যাক দেখুন",
 
@@ -336,9 +336,9 @@ const bn: PageDict = {
 
 const pl: PageDict = {
   "hero.eyebrow": "Dla rodziców w Wielkiej Brytanii mierzących się z SEND",
-  "hero.title": "Sprawa SEND Twojego dziecka, jedno spokojne miejsce.",
+  "hero.title": "Mów swoim językiem. Ich językiem zajmiemy się my.",
   "hero.lede":
-    "Zapisuj, co się dzieje, własnymi słowami i we własnym języku. Zrozum pisma z rady. A gdy przyjdzie przegląd albo trybunał, przekaż czytelny, opatrzony datami pakiet dowodów zamiast pudła papierów.",
+    "Powiedz na głos, co się stało, w jednym z szesnastu języków. SENDSerene zapisze to, opatrzy datą i zarchiwizuje. A gdy rada odpisze językiem celowo trudnym, wyjaśni, co naprawdę mają na myśli i co masz zrobić oraz do kiedy.",
   "hero.cta1": "Załóż darmowe konto",
   "hero.cta2": "Zobacz pakiet dowodów",
 
@@ -399,7 +399,7 @@ const pl: PageDict = {
 
 const ar: PageDict = {
   "hero.eyebrow": "لأولياء الأمور في بريطانيا في مسار SEND",
-  "hero.title": "قضية SEND لطفلك، مكان هادئ واحد.",
+  "hero.title": "تحدث بلغتك. ولغتهم نتكفل بها نحن.",
   "hero.cta1": "ابدأ حسابًا مجانيًا",
   "hero.cta2": "شاهد ملف الأدلة",
   "page.voice.eyebrow": "التسجيل الصوتي",
@@ -426,7 +426,7 @@ const ar: PageDict = {
 
 const fr: PageDict = {
   "hero.eyebrow": "Pour les parents britanniques face au SEND",
-  "hero.title": "Le dossier SEND de votre enfant, un endroit calme.",
+  "hero.title": "Parlez votre langue. La leur, c'est notre affaire.",
   "hero.cta1": "Créer un compte gratuit",
   "hero.cta2": "Voir un dossier de preuves",
   "page.voice.eyebrow": "Journal vocal",
@@ -453,7 +453,7 @@ const fr: PageDict = {
 
 const pt: PageDict = {
   "hero.eyebrow": "Para pais no Reino Unido a lidar com SEND",
-  "hero.title": "O caso SEND do seu filho, um lugar calmo.",
+  "hero.title": "Fale a sua língua. Da deles tratamos nós.",
   "hero.cta1": "Criar conta gratuita",
   "hero.cta2": "Ver um dossiê de provas",
   "page.voice.eyebrow": "Registo de voz",
@@ -480,7 +480,7 @@ const pt: PageDict = {
 
 const tr: PageDict = {
   "hero.eyebrow": "SEND sürecindeki İngiltere'deki ebeveynler için",
-  "hero.title": "Çocuğunuzun SEND dosyası, tek bir sakin yer.",
+  "hero.title": "Siz kendi dilinizde konuşun. Onlarınkini biz hallederiz.",
   "hero.cta1": "Ücretsiz hesap açın",
   "hero.cta2": "Kanıt dosyasını görün",
   "page.voice.eyebrow": "Sesli kayıt",
@@ -507,7 +507,7 @@ const tr: PageDict = {
 
 const ro: PageDict = {
   "hero.eyebrow": "Pentru părinții din Marea Britanie care trec prin SEND",
-  "hero.title": "Cazul SEND al copilului dumneavoastră, un singur loc liniștit.",
+  "hero.title": "Vorbiți în limba dumneavoastră. De a lor ne ocupăm noi.",
   "hero.cta1": "Creați un cont gratuit",
   "hero.cta2": "Vedeți un dosar de dovezi",
   "page.voice.eyebrow": "Jurnal vocal",
@@ -534,7 +534,7 @@ const ro: PageDict = {
 
 const zh: PageDict = {
   "hero.eyebrow": "写给正在应对 SEND 的英国家长",
-  "hero.title": "您孩子的 SEND 案件，一个平静的地方。",
+  "hero.title": "您说您的语言，他们的交给我们。",
   "hero.cta1": "免费创建账户",
   "hero.cta2": "查看证据包",
   "page.voice.eyebrow": "语音记录",
@@ -561,7 +561,7 @@ const zh: PageDict = {
 
 const es: PageDict = {
   "hero.eyebrow": "Para madres y padres en el Reino Unido con SEND",
-  "hero.title": "El caso SEND de su hijo, un lugar tranquilo.",
+  "hero.title": "Hable su idioma. Del suyo nos encargamos nosotros.",
   "hero.cta1": "Crear una cuenta gratuita",
   "hero.cta2": "Ver un expediente de pruebas",
   "page.voice.eyebrow": "Registro de voz",
@@ -588,7 +588,7 @@ const es: PageDict = {
 
 const fa: PageDict = {
   "hero.eyebrow": "برای والدین در بریتانیا در مسیر SEND",
-  "hero.title": "پرونده SEND فرزندتان، یک مکان آرام.",
+  "hero.title": "شما به زبان خودتان بگویید. زبان آن‌ها با ما.",
   "hero.cta1": "ایجاد حساب رایگان",
   "hero.cta2": "دیدن بسته مدارک",
   "page.voice.eyebrow": "ثبت صوتی",
@@ -615,7 +615,7 @@ const fa: PageDict = {
 
 const tg: PageDict = {
   "hero.eyebrow": "Para sa mga magulang sa UK na dumaraan sa SEND",
-  "hero.title": "Ang kaso ng SEND ng iyong anak, isang tahimik na lugar.",
+  "hero.title": "Magsalita sa sarili mong wika. Kami na ang bahala sa kanila.",
   "hero.cta1": "Magsimula ng libreng account",
   "hero.cta2": "Tingnan ang pakete ng ebidensya",
   "page.voice.eyebrow": "Pagtatala sa boses",
@@ -642,7 +642,7 @@ const tg: PageDict = {
 
 const vi: PageDict = {
   "hero.eyebrow": "Dành cho phụ huynh tại Anh đang đi qua SEND",
-  "hero.title": "Hồ sơ SEND của con bạn, một nơi bình yên.",
+  "hero.title": "Bạn cứ nói tiếng của mình. Tiếng của họ để chúng tôi lo.",
   "hero.cta1": "Tạo tài khoản miễn phí",
   "hero.cta2": "Xem hồ sơ bằng chứng",
   "page.voice.eyebrow": "Ghi âm nhật ký",

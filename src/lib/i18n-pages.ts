@@ -39,9 +39,9 @@ type PageDict = Partial<Record<PageKey, string>>;
 
 const en: Record<PageKey, string> = {
   "hero.eyebrow": "For UK parents navigating SEND",
-  "hero.title": "Speak your language. We'll handle theirs.",
+  "hero.title": "Speak in your own words. We'll turn it into evidence.",
   "hero.lede":
-    "Say what happened out loud, in any of sixteen languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
+    "Say what happened out loud, in any of seven languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
   "hero.cta1": "Start a free account",
   "hero.cta2": "See an evidence pack",
 
@@ -68,7 +68,7 @@ const en: Record<PageKey, string> = {
   "page.glossary.eyebrow": "SEND glossary",
   "page.glossary.title": "The words that keep parents out. Defined.",
   "page.glossary.body":
-    "This is a sample of the glossary that powers the jargon decoder. The full version covers hundreds of terms across all sixteen languages, validated by Zifankrah Ltd. Here are the ones parents see most often.",
+    "This is a sample of the glossary that powers the jargon decoder. The full version covers hundreds of terms across all seven launch languages, validated by Zifankrah Ltd. Here are the ones parents see most often.",
 
   "page.timescales.eyebrow": "Statutory timescales",
   "page.timescales.title": "The legal clock. Every week, on the record.",
@@ -83,7 +83,7 @@ const en: Record<PageKey, string> = {
   "page.pricing.eyebrow": "Pricing",
   "page.pricing.title": "Free to start. £5 a month when it matters.",
   "page.pricing.body":
-    "Every account starts free: three jargon decodes, thirty voice logs, one collaborator. Upgrade when you need full history, filtering, and the evidence pack export. Per-child pricing, because most families have one child with SEND, some have more.",
+    "Every account starts free: four jargon decodes, sixty voice logs, up to two children. Upgrade when you need full history, filtering, and the formatted evidence pack. Both tiers cover two children as standard — a small add-on applies for each additional child beyond two.",
 
   "page.security.eyebrow": "Security & privacy",
   "page.security.title": "Special category data, treated like it.",
@@ -667,8 +667,35 @@ const vi: PageDict = {
   "page.faq.title": "Những câu hỏi phụ huynh thực sự đặt ra.",
 };
 
+const ru: PageDict = {
+  "hero.eyebrow": "Для родителей в Великобритании, работающих с системой SEND",
+  "hero.title": "Говорите своими словами. Мы превратим это в доказательства.",
+  "hero.cta1": "Создать бесплатный аккаунт",
+  "hero.cta2": "Посмотреть пакет доказательств",
+  "page.voice.eyebrow": "Голосовой журнал",
+  "page.voice.title": "Скажите вслух, пока свежо. Остальное — наша работа.",
+  "page.decoder.eyebrow": "Декодер терминов",
+  "page.decoder.title": "Письма совета — расшифрованы. Сроки — на виду.",
+  "page.evidence.eyebrow": "Пакет доказательств",
+  "page.evidence.title": "Когда встреча назначена, ваше дело уже готово.",
+  "page.dashboard.eyebrow": "Анализ закономерностей",
+  "page.dashboard.title": "Закономерности, которые вы слишком устали замечать. Теперь видны.",
+  "page.glossary.eyebrow": "Глоссарий SEND",
+  "page.glossary.title": "Слова, закрывающие двери для родителей. Объяснены.",
+  "page.timescales.eyebrow": "Законные сроки",
+  "page.timescales.title": "Юридический отсчёт. Каждая неделя — на учёте.",
+  "page.ehcp.eyebrow": "Внутри EHCP",
+  "page.ehcp.title": "Одиннадцать разделов. Вот для чего каждый из них.",
+  "page.pricing.eyebrow": "Цены",
+  "page.pricing.title": "Бесплатный старт. £5 в месяц, когда нужно.",
+  "page.security.eyebrow": "Безопасность и конфиденциальность",
+  "page.security.title": "Данные особой категории — защищены соответственно.",
+  "page.faq.eyebrow": "Вопросы и ответы",
+  "page.faq.title": "Вопросы, которые родители задают на самом деле.",
+};
+
 export const PAGE_DICTIONARIES: Record<LocaleCode, PageDict> = {
-  en, so, ur, pa, bn, pl, ar, fr, pt, tr, ro, zh, es, fa, tg, vi,
+  en, so, ur, pa, bn, pl, ru, ar, fr, pt, tr, ro, zh, es, fa, tg, vi,
 };
 
 export const PAGE_KEY_COUNT = Object.keys(en).length;

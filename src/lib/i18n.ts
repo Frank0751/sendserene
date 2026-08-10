@@ -17,7 +17,7 @@
    ============================================================ */
 
 export type LocaleCode =
-  | "en" | "so" | "ur" | "pa" | "bn" | "pl"
+  | "en" | "so" | "ur" | "pa" | "bn" | "pl" | "ru"
   | "ar" | "fr" | "pt" | "tr" | "ro" | "zh"
   | "es" | "fa" | "tg" | "vi";
 
@@ -476,8 +476,35 @@ const vi: Dictionary = {
     "Một phần trang này vẫn bằng tiếng Anh trong khi bản dịch đang được hoàn thiện.",
 };
 
+const ru: Dictionary = {
+  "nav.problem": "Суть проблемы",
+  "nav.compare": "Сравнение",
+  "nav.voiceLog": "Голосовой журнал",
+  "nav.decoder": "Декодер терминов",
+  "nav.evidence": "Пакет доказательств",
+  "nav.glossary": "Глоссарий",
+  "nav.pricing": "Цены",
+  "nav.faq": "Вопросы и ответы",
+  "nav.resources": "Ресурсы",
+  "nav.timescales": "Законные сроки",
+  "nav.ehcp": "Разделы EHCP",
+  "nav.expertHelp": "Помощь эксперта",
+  "header.startFree": "Начать бесплатно",
+  "header.accessibility": "Настройки доступности",
+  "header.language": "Язык",
+  "header.chooseLanguage": "Выберите язык",
+  "header.menu": "Открыть меню",
+  "header.languages": "Языки",
+  "footer.product": "Продукт",
+  "footer.getHelp": "Получить помощь",
+  "footer.company": "Компания",
+  "common.backToHome": "На главную",
+  "common.partialNotice":
+    "Часть этой страницы пока на английском — перевод в процессе.",
+};
+
 export const DICTIONARIES: Record<LocaleCode, Dictionary> = {
-  en, so, ur, pa, bn, pl, ar, fr, pt, tr, ro, zh, es, fa, tg, vi,
+  en, so, ur, pa, bn, pl, ru, ar, fr, pt, tr, ro, zh, es, fa, tg, vi,
 };
 
 const TOTAL_KEYS = Object.keys(en).length;

@@ -87,18 +87,21 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               const code = l.code as LocaleCode;
               const selected = code === locale;
               const pct = Math.round(localeCoverage(code) * 100);
+              const soon = "comingSoon" in l && l.comingSoon;
               return (
-                <li key={l.code} role="option" aria-selected={selected}>
+                <li key={l.code} role="option" aria-selected={selected} aria-disabled={soon || undefined}>
                   <button
                     type="button"
+                    disabled={!!soon}
                     onClick={() => {
+                      if (soon) return;
                       setLocale(code);
                       setOpen(false);
                     }}
                     className={cn(
                       "w-full flex items-center justify-between gap-3 min-h-11 px-3 py-2 rounded-lg text-start transition-colors",
-                      selected
-                        ? "bg-teal-pale/60"
+                      selected ? "bg-teal-pale/60"
+                        : soon ? "opacity-50 cursor-default"
                         : "hover:bg-paper-2/70"
                     )}
                   >
@@ -110,8 +113,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                         {l.native}
                       </span>
                       <span className="block font-mono text-[9.5px] uppercase tracking-wider text-ink-light mt-0.5">
-                        {l.label}
-                        {pct < 100 && ` · ${pct}% translated`}
+                        {soon ? `${l.label} · Coming soon`
+                          : pct < 100 ? `${l.label} · ${pct}% translated`
+                          : l.label}
                       </span>
                     </span>
                     {selected && (

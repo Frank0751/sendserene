@@ -35,29 +35,28 @@ export const languages = [
   { code: "pa", label: "Punjabi", native: "ਪੰਜਾਬੀ", sample: "ਤੁਹਾਡੇ ਬੱਚੇ ਦਾ SEND ਕੇਸ, ਇੱਕ ਸ਼ਾਂਤ ਥਾਂ।" },
   { code: "bn", label: "Bengali", native: "বাংলা", sample: "আপনার সন্তানের SEND মামলা, একটি শান্ত জায়গা।" },
   { code: "pl", label: "Polish", native: "Polski", sample: "Sprawa SEND Twojego dziecka, jedno spokojne miejsce." },
-  { code: "ar", label: "Arabic", native: "العربية", sample: "قضية SEND لطفلك، مكان هادئ واحد." },
-  { code: "fr", label: "French", native: "Français", sample: "Le dossier SEND de votre enfant, un endroit calme." },
-  { code: "pt", label: "Portuguese", native: "Português", sample: "O caso SEND do seu filho, um lugar calmo." },
-  { code: "tr", label: "Turkish", native: "Türkçe", sample: "Çocuğunuzun SEND davası, tek bir sakin yer." },
-  { code: "ro", label: "Romanian", native: "Română", sample: "Cazul SEND al copilului dumneavoastră, un singur loc liniștit." },
-  { code: "zh", label: "Chinese", native: "中文", sample: "您孩子的 SEND 案例，一个平静的地方." },
-  { code: "es", label: "Spanish", native: "Español", sample: "El caso SEND de su hijo, un lugar tranquilo." },
-  { code: "fa", label: "Persian", native: "فارسی", sample: "پرونده SEND فرزندتان، یک مکان آرام." },
-  { code: "tg", label: "Tagalog", native: "Tagalog", sample: "Ang kaso ng SEND ng iyong anak, isang tahimik na lugar." },
-  { code: "vi", label: "Vietnamese", native: "Tiếng Việt", sample: "Hồ sơ SEND của con bạn, một nơi bình yên." },
+  { code: "ru", label: "Russian", native: "Русский", sample: "Дело SEND вашего ребёнка — одно спокойное место." },
+  { code: "ar", label: "Arabic", native: "العربية", sample: "قضية SEND لطفلك، مكان هادئ واحد.", comingSoon: true },
+  { code: "fr", label: "French", native: "Français", sample: "Le dossier SEND de votre enfant, un endroit calme.", comingSoon: true },
+  { code: "pt", label: "Portuguese", native: "Português", sample: "O caso SEND do seu filho, um lugar calmo.", comingSoon: true },
+  { code: "tr", label: "Turkish", native: "Türkçe", sample: "Çocuğunuzun SEND davası, tek bir sakin yer.", comingSoon: true },
+  { code: "ro", label: "Romanian", native: "Română", sample: "Cazul SEND al copilului dumneavoastră, un singur loc liniștit.", comingSoon: true },
+  { code: "zh", label: "Chinese", native: "中文", sample: "您孩子的 SEND 案例，一个平静的地方.", comingSoon: true },
+  { code: "es", label: "Spanish", native: "Español", sample: "El caso SEND de su hijo, un lugar tranquilo.", comingSoon: true },
+  { code: "fa", label: "Persian", native: "فارسی", sample: "پرونده SEND فرزندتان، یک مکان آرام.", comingSoon: true },
+  { code: "tg", label: "Tagalog", native: "Tagalog", sample: "Ang kaso ng SEND ng iyong anak, isang tahimik na lugar.", comingSoon: true },
+  { code: "vi", label: "Vietnamese", native: "Tiếng Việt", sample: "Hồ sơ SEND của con bạn, một nơi bình yên.", comingSoon: true },
 ];
 
 export const hero = {
   eyebrow: "For UK parents navigating SEND",
-  // Deliberately leads on the two things no other UK SEND tool does:
-  // capture in the parent's own language, and decode the system's.
-  titleLines: ["Speak your language.", "We'll handle", "theirs."],
+  titleLines: ["Speak in your own words.", "We'll turn it", "into evidence."],
   lede:
-    "Say what happened out loud, in any of sixteen languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
+    "Say what happened out loud, in any of seven languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
   primaryCta: "Start a free account",
   secondaryCta: "See an evidence pack",
   trust: [
-    "Sixteen languages, including Somali, Urdu, Punjabi, Bengali, Polish and Arabic",
+    "Seven languages at launch — English, Somali, Urdu, Punjabi, Bengali, Polish and Russian — each checked by a native speaker before it goes live.",
     "UK data residency. Stored in the London region, not shipped overseas.",
     "Built with Zifankrah Ltd, a SEND-parent-led organisation.",
   ],
@@ -107,7 +106,7 @@ export const pillars = [
     title: "Capture",
     body: "Speak into your phone for up to five minutes. SENDSerene transcribes it, lets you fix the wording, and files it under the right statutory category. No typing at midnight. No notebook left on the bus.",
     points: [
-      "Voice log in any of sixteen languages",
+      "Voice log in any of seven launch languages",
       "Auto-tagged to the four SEND categories",
       "Pin the entries that matter most",
     ],
@@ -153,12 +152,13 @@ export const voiceFeature = {
     loggedBy: "Sarah Bennett",
   },
   features: [
-    "Five-minute hard stop with a 30-second warning",
-    "Editable transcript before it's filed",
+    "A five-minute window with a gentle warning before time runs out",
+    "An editable transcript before anything is saved",
+    "Automatic tagging against the four statutory SEND categories, correctable by the parent",
+    "A clear flag for anything safeguarding-related",
     "Side-by-side original and English translation",
     "Low-confidence translations flagged for review",
     "AI follow-up questions, never blocking the save",
-    "Urgent flag for safeguarding-level entries",
     "Source audio deleted within an hour of transcription",
     "Plain keyword search across every entry",
   ],
@@ -366,9 +366,9 @@ export const evidenceFeature = {
 };
 
 export const languagesFeature = {
-  eyebrow: "Sixteen languages. One system.",
+  eyebrow: "Seven languages at launch. More coming.",
   title: "The system wasn't built for families who don't think in English. We are.",
-  body: "Most SEND support is English-only. The letters, the forms, the helplines. SENDSerene works in sixteen languages, including English, Somali, Urdu, Punjabi, Bengali, Polish, Arabic, French, Portuguese, Turkish, Romanian, Chinese, Spanish, Persian, Tagalog and Vietnamese. The communities most underserved by English-only support, covered. Record in your language. Read the decode in your language. Export in English when you need to.",
+  body: "Most SEND support is English-only. The letters, the forms, the helplines. SENDSerene launches in seven languages: English, Somali, Urdu, Punjabi, Bengali, Polish and Russian — the communities most underserved by English-only support. Each translation is checked by a native speaker before it goes live. More languages are on the roadmap. Record in your language. Read the decode in your language. Export in English when you need to.",
 };
 
 export const expertHelp = {
@@ -542,7 +542,7 @@ export const comparison = {
       feature: "Working in your first language",
       folder: "Find a friend to translate. Hope they got it right.",
       sheet: "Google Translate. It doesn't know SEND terminology.",
-      sendserene: "Sixteen languages with a SEND glossary override layer.",
+      sendserene: "Seven languages at launch, with a SEND glossary override layer.",
     },
     {
       feature: "When you're done with it",
@@ -564,8 +564,8 @@ export const adminPanel = {
       title: "Tier limits",
       body: "Every numeric limit in the product is configurable. Free tier voice logs per month, premium decodes, collaborator seats, all of it.",
       rows: [
-        { setting: "Free tier voice logs / month", value: "30", type: "number" },
-        { setting: "Free tier jargon decodes / month", value: "3", type: "number" },
+        { setting: "Free tier voice logs / month", value: "60", type: "number" },
+        { setting: "Free tier jargon decodes / month", value: "4", type: "number" },
         { setting: "Free tier collaborators", value: "1", type: "number" },
         { setting: "Premium base children", value: "2", type: "number" },
         { setting: "Premium extra child / month (£)", value: "2.00", type: "currency" },
@@ -664,7 +664,7 @@ export const onboarding = {
 export const glossary = {
   eyebrow: "SEND glossary",
   title: "The words that keep parents out. Defined.",
-  body: "This is a sample of the glossary that powers the jargon decoder. The full version covers hundreds of terms across all sixteen languages, validated by Zifankrah Ltd. Here are the ones parents see most often.",
+  body: "This is a sample of the glossary that powers the jargon decoder. The full version covers hundreds of terms across all seven launch languages, validated by Zifankrah Ltd. Here are the ones parents see most often.",
   categories: ["All", "Legal", "Education", "Health", "Process"],
   terms: [
     {
@@ -1306,8 +1306,8 @@ export const notIncluded = {
     },
     {
       title: "A free-for-life product",
-      body: "Free tier is generous but limited. Premium exists because running this properly, UK data residency, AI, security, costs money. We won't sell your data to make it free.",
-      instead: "£5/month if you need the full version",
+      body: "Free tier is generous but limited. Premium exists because running this properly — UK data residency, AI, security — costs money. We won't sell your data to make it free.",
+      instead: "£5/month or £48/year if you need the full version",
     },
   ],
 };
@@ -1401,18 +1401,19 @@ export const personas = [
 export const pricing = {
   eyebrow: "Pricing",
   title: "Free to start. £5 a month when it matters.",
-  body: "Every account starts free: three jargon decodes, thirty voice logs, one collaborator. Upgrade when you need full history, filtering, and the evidence pack export. Per-child pricing, because most families have one child with SEND, some have more.",
+  body: "Every account starts free: four jargon decodes, sixty voice logs, up to two children. Upgrade when you need full history, filtering, and the formatted evidence pack. Both tiers cover two children as standard — a small add-on applies for each additional child beyond two.",
   free: {
     name: "Free",
     price: "£0",
     period: "always",
     blurb: "Enough to find out if this works for you.",
     features: [
-      "3 jargon decodes per month",
-      "30 voice logs per month",
+      "4 jargon decodes per month",
+      "60 voice logs per month",
+      "Up to 2 children per account",
       "1 invited collaborator",
       "6-month evidence export, unfiltered",
-      "All 16 languages",
+      "All 7 launch languages",
       "Full accessibility panel",
     ],
     cta: "Start free",
@@ -1438,7 +1439,7 @@ export const pricing = {
       "Per-child billing",
     ],
     cta: "Start Premium",
-    note: "Premium covers two children. Each additional child adds £2/month or £20/year.",
+    note: "Both tiers cover up to two children. Each additional child beyond two adds £2/month or £20/year.",
   },
 };
 
@@ -1534,7 +1535,7 @@ export const faqs = [
   },
   {
     q: "Which languages are supported?",
-    a: "English, Somali, Urdu, Punjabi, Bengali and Polish, across the interface, voice logging, translation, and the jargon decoder. The toggle and framework are built by KoomBei; the translated wording is supplied and validated by Zifankrah Ltd.",
+    a: "Seven languages at launch: English, Somali, Urdu, Punjabi, Bengali, Polish and Russian — across the interface, voice logging, translation, and the jargon decoder. Each translation is checked by a native speaker before it goes live. The toggle and framework are built by KoomBei Digital; the translated wording is supplied and validated by Zifankrah Ltd. More languages are on the roadmap.",
   },
   {
     q: "What if I need to cancel?",

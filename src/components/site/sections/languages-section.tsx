@@ -28,14 +28,19 @@ export function LanguagesSection() {
               </p>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {languages.map((l, i) => (
+                {languages.map((l, i) => {
+                  const soon = "comingSoon" in l && l.comingSoon;
+                  return (
                   <button
                     key={l.code}
-                    onClick={() => setActive(i)}
+                    onClick={() => !soon && setActive(i)}
+                    disabled={!!soon}
                     className={cn(
                       "p-3 rounded-lg border text-left transition-all",
                       active === i
                         ? "border-teal bg-teal-pale/50"
+                        : soon
+                        ? "border-paper-3 bg-paper-card opacity-50 cursor-default"
                         : "border-paper-3 bg-paper-card hover:border-ink-light/40"
                     )}
                     aria-pressed={active === i}
@@ -47,9 +52,10 @@ export function LanguagesSection() {
                     <p className="font-display text-[14px] font-medium text-ink mt-1" dir={["ur", "pa", "bn", "ar", "fa"].includes(l.code) ? "rtl" : "ltr"}>
                       {l.native}
                     </p>
-                    <p className="font-mono text-[9.5px] text-ink-light mt-0.5">{l.label}</p>
+                    <p className="font-mono text-[9.5px] text-ink-light mt-0.5">{soon ? `${l.label} · soon` : l.label}</p>
                   </button>
-                ))}
+                  );
+                })}
               </div>
             </div>
 

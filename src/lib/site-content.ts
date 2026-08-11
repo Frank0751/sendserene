@@ -36,16 +36,6 @@ export const languages = [
   { code: "bn", label: "Bengali", native: "বাংলা", sample: "আপনার সন্তানের SEND মামলা, একটি শান্ত জায়গা।" },
   { code: "pl", label: "Polish", native: "Polski", sample: "Sprawa SEND Twojego dziecka, jedno spokojne miejsce." },
   { code: "ru", label: "Russian", native: "Русский", sample: "Дело SEND вашего ребёнка — одно спокойное место." },
-  { code: "ar", label: "Arabic", native: "العربية", sample: "قضية SEND لطفلك، مكان هادئ واحد.", comingSoon: true },
-  { code: "fr", label: "French", native: "Français", sample: "Le dossier SEND de votre enfant, un endroit calme.", comingSoon: true },
-  { code: "pt", label: "Portuguese", native: "Português", sample: "O caso SEND do seu filho, um lugar calmo.", comingSoon: true },
-  { code: "tr", label: "Turkish", native: "Türkçe", sample: "Çocuğunuzun SEND davası, tek bir sakin yer.", comingSoon: true },
-  { code: "ro", label: "Romanian", native: "Română", sample: "Cazul SEND al copilului dumneavoastră, un singur loc liniștit.", comingSoon: true },
-  { code: "zh", label: "Chinese", native: "中文", sample: "您孩子的 SEND 案例，一个平静的地方.", comingSoon: true },
-  { code: "es", label: "Spanish", native: "Español", sample: "El caso SEND de su hijo, un lugar tranquilo.", comingSoon: true },
-  { code: "fa", label: "Persian", native: "فارسی", sample: "پرونده SEND فرزندتان، یک مکان آرام.", comingSoon: true },
-  { code: "tg", label: "Tagalog", native: "Tagalog", sample: "Ang kaso ng SEND ng iyong anak, isang tahimik na lugar.", comingSoon: true },
-  { code: "vi", label: "Vietnamese", native: "Tiếng Việt", sample: "Hồ sơ SEND của con bạn, một nơi bình yên.", comingSoon: true },
 ];
 
 export const hero = {

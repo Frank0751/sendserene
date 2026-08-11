@@ -44,7 +44,7 @@ export function VoiceSection() {
   };
 
   return (
-    <section id="voice" className="paper-grain">
+    <section id="capture" className="paper-grain">
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 lg:py-28">
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">

@@ -1,30 +1,29 @@
 import { SiteHeader } from "@/components/site/site-header";
-import { TranslationNotice } from "@/components/site/translation-notice";
 import { SiteFooter } from "@/components/site/site-footer";
 import { AccessibilityPanel } from "@/components/site/accessibility-panel";
 import { ScrollUtilities } from "@/components/site/scroll-utilities";
 import { HeroSection } from "@/components/site/sections/hero-section";
-import { StatBand, ProblemSection } from "@/components/site/sections/problem-section";
-import { ComparisonSection } from "@/components/site/sections/comparison-section";
-import { WhereYouAreSection } from "@/components/site/sections/where-you-are-section";
-import { PillarsSection } from "@/components/site/sections/pillars-section";
-import { FinalCtaSection } from "@/components/site/sections/final-cta-section";
-import { HomeFeatureGrid } from "@/components/site/home-feature-grid";
+import { HowItWorksSection } from "@/components/site/sections/how-it-works-section";
+import { VoiceSection } from "@/components/site/sections/voice-section";
+import { DecoderSection } from "@/components/site/sections/decoder-section";
+import { SecuritySection } from "@/components/site/sections/security-section";
+import { LanguagesSection } from "@/components/site/sections/languages-section";
+import { PricingSection } from "@/components/site/sections/pricing-section";
+import { FaqSection } from "@/components/site/sections/faq-section";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">
       <SiteHeader />
-      <TranslationNotice />
       <main className="flex-1">
         <HeroSection />
-        <StatBand />
-        <ProblemSection />
-        <WhereYouAreSection />
-        <ComparisonSection />
-        <PillarsSection />
-        <HomeFeatureGrid />
-        <FinalCtaSection />
+        <HowItWorksSection />
+        <VoiceSection />
+        <DecoderSection />
+        <SecuritySection />
+        <LanguagesSection />
+        <PricingSection />
+        <FaqSection />
       </main>
       <SiteFooter />
       <AccessibilityPanel />

@@ -34,6 +34,7 @@ export type TranslationKey =
   | "nav.problem" | "nav.compare" | "nav.voiceLog" | "nav.decoder"
   | "nav.evidence" | "nav.glossary" | "nav.pricing" | "nav.faq"
   | "nav.resources" | "nav.timescales" | "nav.ehcp" | "nav.expertHelp"
+  | "nav.howItWorks" | "nav.security" | "nav.languages"
   | "header.startFree" | "header.accessibility" | "header.language"
   | "header.chooseLanguage" | "header.menu" | "header.languages"
   | "footer.product" | "footer.getHelp" | "footer.company"
@@ -46,7 +47,7 @@ const en: Record<TranslationKey, string> = {
   "nav.problem": "The problem",
   "nav.compare": "How we compare",
   "nav.voiceLog": "Voice log",
-  "nav.decoder": "Jargon decoder",
+  "nav.decoder": "Decoder",
   "nav.evidence": "Evidence pack",
   "nav.glossary": "Glossary",
   "nav.pricing": "Pricing",
@@ -55,7 +56,10 @@ const en: Record<TranslationKey, string> = {
   "nav.timescales": "Timescales",
   "nav.ehcp": "EHCP sections",
   "nav.expertHelp": "Expert help",
-  "header.startFree": "Start free",
+  "nav.howItWorks": "How it works",
+  "nav.security": "Security",
+  "nav.languages": "Languages",
+  "header.startFree": "Get started",
   "header.accessibility": "Accessibility settings",
   "header.language": "Language",
   "header.chooseLanguage": "Choose your language",

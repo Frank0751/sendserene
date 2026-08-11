@@ -53,7 +53,7 @@ export function DecoderSection() {
   };
 
   return (
-    <section id="decoder" className="border-y border-paper-3 bg-paper-2/30 paper-grain">
+    <section id="decode" className="border-y border-paper-3 bg-paper-2/30 paper-grain">
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 lg:py-28">
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="max-w-2xl">

@@ -19,13 +19,12 @@ export const site = {
  * lib/i18n.ts so the header can render the label in the chosen language.
  */
 export const nav = [
-  { label: "The problem", href: "/#problem", key: "nav.problem" },
-  { label: "Voice log", href: "/voice-log", key: "nav.voiceLog" },
-  { label: "Jargon decoder", href: "/decoder", key: "nav.decoder" },
-  { label: "Evidence pack", href: "/evidence", key: "nav.evidence" },
-  { label: "Glossary", href: "/glossary", key: "nav.glossary" },
-  { label: "Pricing", href: "/pricing", key: "nav.pricing" },
-  { label: "FAQ", href: "/faq", key: "nav.faq" },
+  { label: "How it works", href: "/#how", key: "nav.howItWorks" },
+  { label: "Voice log", href: "/#capture", key: "nav.voiceLog" },
+  { label: "Decoder", href: "/#decode", key: "nav.decoder" },
+  { label: "Security", href: "/#security", key: "nav.security" },
+  { label: "Pricing", href: "/#pricing", key: "nav.pricing" },
+  { label: "FAQ", href: "/#faq", key: "nav.faq" },
 ] as const;
 
 export const languages = [
@@ -42,7 +41,7 @@ export const hero = {
   eyebrow: "For UK parents navigating SEND",
   titleLines: ["Speak in your own words.", "We'll turn it", "into evidence."],
   lede:
-    "Say what happened out loud, in any of seven languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
+    "SENDSerene gives parents one calm place to capture what's happening with their child, understand what the council's letters actually mean, and walk into every meeting with a clear, dated record behind them — in whichever of seven languages they think in.",
   primaryCta: "Start a free account",
   secondaryCta: "See an evidence pack",
   trust: [
@@ -125,6 +124,32 @@ export const pillars = [
     accent: "sage" as const,
   },
 ];
+
+export const howItWorks = {
+  eyebrow: "How it works",
+  title: "Capture. Understand. Prove.",
+  body: "SENDSerene isn't a chatbot and it isn't a filing cabinet. It's the part in between — the thing that turns a hard day into something a tribunal panel can actually read.",
+  steps: [
+    {
+      num: "01",
+      label: "Capture",
+      title: "Say it, don't write it",
+      body: "A five-minute voice note, transcribed and filed under the right category the moment it happens.",
+    },
+    {
+      num: "02",
+      label: "Understand",
+      title: "Letters, decoded",
+      body: "A plain-English summary, the jargon explained in context, every deadline dated for you.",
+    },
+    {
+      num: "03",
+      label: "Prove",
+      title: "A record that holds up",
+      body: "A paginated, numbered evidence pack, ready in moments when a review is called.",
+    },
+  ],
+};
 
 export const voiceFeature = {
   eyebrow: "Voice logging",
@@ -1398,13 +1423,9 @@ export const pricing = {
     period: "always",
     blurb: "Enough to find out if this works for you.",
     features: [
-      "4 jargon decodes per month",
-      "60 voice logs per month",
-      "Up to 2 children per account",
-      "1 invited collaborator",
-      "6-month evidence export, unfiltered",
-      "All 7 launch languages",
-      "Full accessibility panel",
+      "60 voice logs a month",
+      "4 jargon decodes a month",
+      "Up to two children per account",
     ],
     cta: "Start free",
   },
@@ -1418,15 +1439,9 @@ export const pricing = {
     yearlyPrice: 48,
     blurb: "Full history, filtering, and the formatted evidence pack.",
     features: [
-      "Unlimited jargon decodes",
-      "Unlimited voice logs",
-      "Up to 5 invited collaborators",
-      "Full history evidence export, filtered",
-      "Formatted evidence pack PDF",
-      "Statutory deadline reminders by email and in-app",
-      "Configurable reminder digest: daily, weekly, or off",
-      "Quick brief one-pager",
-      "Per-child billing",
+      "Unlimited logs and decodes",
+      "Up to two children included",
+      "Collaborator access",
     ],
     cta: "Start Premium",
     note: "Both tiers cover up to two children. Each additional child beyond two adds £2/month or £20/year.",
@@ -1504,36 +1519,16 @@ export const deadlineCalc = {
 
 export const faqs = [
   {
-    q: "Is SENDSerene legal advice?",
-    a: "No. SENDSerene is an organisation and evidence tool. It does not provide legal, medical, or educational advice. It does not diagnose children. The plain-English decodes are summaries, not interpretations of your legal position. For advice on your case, contact IPSEA, SENDIASS, or a solicitor.",
-  },
-  {
-    q: "Where is my data stored?",
-    a: "In the AWS London region (eu-west-2). Database, file storage, and OCR all run in-region. Your data does not leave the UK. Documents stream directly from your browser to UK storage using short-lived presigned URLs, they do not pass through the application server.",
-  },
-  {
-    q: "What happens to the audio I record?",
-    a: "Source audio is transcribed server-side and deleted within one hour of transcription. The transcript, which you can edit, is what's stored. The sound of your voice is not retained.",
-  },
-  {
-    q: "Does the AI see my child's name?",
-    a: "No. Before any text is sent to the AI (Anthropic Claude, zero data retention by default), personally identifying information is redacted, names, dates of birth, NHS numbers and addresses. The AI sees the substance of a letter, not who it's about.",
-  },
-  {
-    q: "Can a co-parent or advocate use the account?",
-    a: "Yes. You can invite collaborators with scoped, permission-controlled access: viewing level, voice logging permission, document download permission, and an optional expiry date. Invitations are tokenised single-use emails. View-only contributors can generate evidence packs without access to billing or settings.",
+    q: "Is this legal advice?",
+    a: "No. The plain-English decodes are summaries, not interpretations of your legal position — for advice, IPSEA, SENDIASS or a solicitor are the right place to go.",
   },
   {
     q: "Which languages are supported?",
-    a: "Seven languages at launch: English, Somali, Urdu, Punjabi, Bengali, Polish and Russian — across the interface, voice logging, translation, and the jargon decoder. Each translation is checked by a native speaker before it goes live. The toggle and framework are built by KoomBei Digital; the translated wording is supplied and validated by Zifankrah Ltd. More languages are on the roadmap.",
+    a: "English, Somali, Urdu, Punjabi, Bengali, Polish and Russian — toggle and framework by KoomBei, translations supplied and validated by Zifankrah Ltd.",
   },
   {
-    q: "What if I need to cancel?",
-    a: "Cancel anytime from the billing portal. You keep access until the end of the period you've paid for. Your data stays for 90 days after that in case you change your mind, then it's deleted. You can also export everything or delete the account immediately from settings, at any time, on any plan.",
-  },
-  {
-    q: "Who built this, and who owns it?",
-    a: "SENDSerene is owned by Zifankrah Ltd, a SEND-parent-led organisation. It was built by KoomBei Digital Limited in Accra under project reference KB-2026-007. Zifankrah owns all third-party accounts (AWS, hosting, Stripe, AI, email) and the domain. KoomBei does not hold standing access to live personal data after handover.",
+    q: "Who built this?",
+    a: "SENDSerene is a product of Zifankrah Ltd, a SEND-parent-led organisation. The technical build is by KoomBei Digital Limited.",
   },
 ];
 

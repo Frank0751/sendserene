@@ -41,7 +41,7 @@ const en: Record<PageKey, string> = {
   "hero.eyebrow": "For UK parents navigating SEND",
   "hero.title": "Speak in your own words. We'll turn it into evidence.",
   "hero.lede":
-    "Say what happened out loud, in any of seven languages. SENDSerene writes it down, dates it, and files it. Then, when the council writes back in language designed to be difficult, it tells you what they actually mean and what you have to do by when.",
+    "SENDSerene gives parents one calm place to capture what's happening with their child, understand what the council's letters actually mean, and walk into every meeting with a clear, dated record behind them — in whichever of seven languages they think in.",
   "hero.cta1": "Start a free account",
   "hero.cta2": "See an evidence pack",
 

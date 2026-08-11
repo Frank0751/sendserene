@@ -19,12 +19,12 @@ export const site = {
  * lib/i18n.ts so the header can render the label in the chosen language.
  */
 export const nav = [
-  { label: "How it works", href: "/#how", key: "nav.howItWorks" },
-  { label: "Voice log", href: "/#capture", key: "nav.voiceLog" },
-  { label: "Decoder", href: "/#decode", key: "nav.decoder" },
-  { label: "Security", href: "/#security", key: "nav.security" },
-  { label: "Pricing", href: "/#pricing", key: "nav.pricing" },
-  { label: "FAQ", href: "/#faq", key: "nav.faq" },
+  { label: "How it works", href: "/how-it-works", key: "nav.howItWorks" },
+  { label: "Voice log", href: "/voice-log", key: "nav.voiceLog" },
+  { label: "Decoder", href: "/decoder", key: "nav.decoder" },
+  { label: "Security", href: "/security", key: "nav.security" },
+  { label: "Pricing", href: "/pricing", key: "nav.pricing" },
+  { label: "FAQ", href: "/faq", key: "nav.faq" },
 ] as const;
 
 export const languages = [
@@ -1415,8 +1415,8 @@ export const personas = [
 
 export const pricing = {
   eyebrow: "Pricing",
-  title: "Free to start. £5 a month when it matters.",
-  body: "Every account starts free: four jargon decodes, sixty voice logs, up to two children. Upgrade when you need full history, filtering, and the formatted evidence pack. Both tiers cover two children as standard — a small add-on applies for each additional child beyond two.",
+  title: "Free to start. Fair when it matters.",
+  body: "Both tiers cover up to two children on one account. A third or further child adds £2/month (£20/year), on either tier.",
   free: {
     name: "Free",
     price: "£0",
@@ -1529,6 +1529,26 @@ export const faqs = [
   {
     q: "Who built this?",
     a: "SENDSerene is a product of Zifankrah Ltd, a SEND-parent-led organisation. The technical build is by KoomBei Digital Limited.",
+  },
+  {
+    q: "Where is my data stored?",
+    a: "In the AWS London region (eu-west-2). Your data does not leave the UK. Documents stream directly from your browser to UK storage using short-lived presigned URLs — they never pass through the application server.",
+  },
+  {
+    q: "What happens to the audio I record?",
+    a: "Source audio is transcribed and deleted within one hour of transcription. The transcript — which you can edit before saving — is what's stored. The sound of your voice is not retained.",
+  },
+  {
+    q: "Does the AI see my child's name?",
+    a: "No. Before any text is sent to the AI, personally identifying information is redacted — names, dates of birth, NHS numbers, addresses. The AI sees the substance of a letter, not who it's about.",
+  },
+  {
+    q: "Can a co-parent or advocate use the account?",
+    a: "Yes. Premium accounts can invite collaborators with scoped, permission-controlled access. You choose what they can see and do, and access expires when you say it does.",
+  },
+  {
+    q: "Can I cancel at any time?",
+    a: "Yes. Cancel from the billing portal whenever you like. You keep access until the end of the period you've paid for. You can also export all your data or delete the account entirely from settings, at any time, on any plan.",
   },
 ];
 

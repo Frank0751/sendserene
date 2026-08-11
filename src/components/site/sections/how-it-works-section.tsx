@@ -2,9 +2,10 @@
 
 import { useReveal } from "@/hooks/use-reveal";
 import { howItWorks } from "@/lib/site-content";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function HowItWorksSection() {
+export function HowItWorksSection({ showTeaser = false }: { showTeaser?: boolean }) {
   const { ref, visible } = useReveal();
 
   return (
@@ -23,10 +24,7 @@ export function HowItWorksSection() {
 
           <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
             {howItWorks.steps.map((step) => (
-              <article
-                key={step.num}
-                className="card-paper p-7 lg:p-8 card-hover"
-              >
+              <article key={step.num} className="card-paper p-7 lg:p-8 card-hover">
                 <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-light mb-4">
                   {step.num} — {step.label}
                 </p>
@@ -39,6 +37,18 @@ export function HowItWorksSection() {
               </article>
             ))}
           </div>
+
+          {showTeaser && (
+            <div className="mt-10">
+              <a
+                href="/how-it-works"
+                className="btn-ghost inline-flex items-center gap-2 text-[14px]"
+              >
+                See how it works in detail
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>

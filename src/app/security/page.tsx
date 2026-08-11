@@ -1,47 +1,24 @@
 import { SiteHeader } from "@/components/site/site-header";
-import { TranslationNotice } from "@/components/site/translation-notice";
 import { SiteFooter } from "@/components/site/site-footer";
 import { AccessibilityPanel } from "@/components/site/accessibility-panel";
 import { ScrollUtilities } from "@/components/site/scroll-utilities";
-import { PageHeader } from "@/components/site/page-header";
 import { SecuritySection } from "@/components/site/sections/security-section";
 import { DataFlowSection } from "@/components/site/sections/data-flow-section";
-import { CollaboratorsSection } from "@/components/site/sections/collaborators-section";
-import { LanguagesSection } from "@/components/site/sections/languages-section";
-import { security } from "@/lib/site-content";
 
 export const metadata = {
-  title: "Security and data protection, special category data treated like it",
+  title: "Security and data protection — special category data, treated like it",
   description:
-    "UK data residency in the AWS London region, row level security, encryption at rest and in transit, and a clear international transfer protocol.",
+    "UK data residency, row-level security, PII redacted before AI, and a clear protocol for Ghana-based development. Your child's data never leaves the UK.",
   alternates: { canonical: "/security" },
-  openGraph: {
-    title: "Security and data protection, special category data treated like it",
-    description: "UK data residency in the AWS London region, row level security, encryption at rest and in transit, and a clear international transfer protocol.",
-    url: "/security",
-  },
 };
-
 
 export default function SecurityPage() {
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink">
       <SiteHeader />
-      <TranslationNotice />
       <main className="flex-1">
-        <PageHeader
-          eyebrowKey="page.security.eyebrow"
-          titleKey="page.security.title"
-          bodyKey="page.security.body"
-        bgImage="/img/hero-security.png"
-          eyebrow={security.eyebrow}
-          title={security.title}
-          body={security.body}
-        />
         <SecuritySection />
         <DataFlowSection />
-        <CollaboratorsSection />
-        <LanguagesSection />
       </main>
       <SiteFooter />
       <AccessibilityPanel />

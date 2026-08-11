@@ -29,7 +29,7 @@ export function EhcpViewerSection() {
 
           <div className="mt-12 grid lg:grid-cols-[1fr_1.3fr] gap-6 lg:gap-8 items-start">
             {/* Left, section letter grid */}
-            <div className="grid grid-cols-6 sm:grid-cols-4 lg:grid-cols-3 gap-2 lg:sticky lg:top-24">
+            <div className="grid grid-cols-6 sm:grid-cols-4 lg:grid-cols-3 gap-2 ">
               {ehcpViewer.sections.map((s) => {
                 const isActive = active === s.letter;
                 return (

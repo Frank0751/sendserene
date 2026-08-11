@@ -48,7 +48,7 @@ export function DeadlineCalcSection() {
       <div className="mx-auto max-w-[1180px] px-5 sm:px-8 py-20 lg:py-28">
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
-            <div className="lg:sticky lg:top-24">
+            <div className="">
               <p className="eyebrow">{deadlineCalc.eyebrow}</p>
               <h2 className="display mt-4 text-[2rem] sm:text-[2.6rem] lg:text-[3rem] text-ink">
                 One date in.{" "}

@@ -15,7 +15,7 @@ export function EmailIngestionSection() {
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
             {/* Left, copy */}
-            <div className="lg:sticky lg:top-24">
+            <div className="">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full font-mono text-[9.5px] uppercase tracking-[0.14em] border border-paper-3 bg-paper-card text-ink-light mb-5">
                 <span className="h-1.5 w-1.5 rounded-full bg-clay" />
                 {emailIngestion.eyebrow}

@@ -49,7 +49,7 @@ export function VoiceSection() {
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
             {/* Left copy */}
-            <div className="lg:sticky lg:top-24">
+            <div className="">
               <p className="eyebrow">{voiceFeature.eyebrow}</p>
               <h2 className="display mt-4 text-[2rem] sm:text-[2.6rem] lg:text-[3rem] text-ink">
                 Say it out loud while it's fresh.{" "}

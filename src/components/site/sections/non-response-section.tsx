@@ -20,7 +20,7 @@ export function NonResponseSection() {
         <div ref={ref} className={cn("reveal", visible && "is-visible")}>
           <div className="grid lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-16 items-start">
             {/* Left, copy + how it works */}
-            <div className="lg:sticky lg:top-24">
+            <div className="">
               <p className="eyebrow">{nonResponse.eyebrow}</p>
               <h2 className="display mt-4 text-[2rem] sm:text-[2.6rem] lg:text-[3rem] text-ink">
                 {nonResponse.title}
